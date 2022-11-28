@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-image: url('./assets/img/background.jpg');
+}
+.search-box {
+  width: 60%;
+  margin: auto;
+}
+.imgBackground {
+  width: 20%;
+  height: 20%;
+  margin: auto;
+}
+.imgBackground img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.inputValue {
+  width: 60%;
+  height: 40px;
+  margin: auto;
+}
+.inputValue input {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: auto;
+  border: none;
+  font-size: 18px;
+}
+
+
+.resultTotal {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.result {
+  width: 20%;
+  margin: 20px auto;
+}
+.result .flip-card {
+  width: 100%;
+  height: 350px;
+  /* border: 1px solid rgb(179, 255, 0); */
+  overflow: hidden;
+}
+
+.result .resultCard .actName,
+.result .resultCard .nickName,
+.result .resultCard .birthDay,
+.result .resultCard .status {
+  margin: 10px;
+}
+
+.result .cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
